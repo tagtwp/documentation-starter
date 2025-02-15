@@ -3,9 +3,9 @@ title: Installation
 ---
 
 # Installation
-If you choose to use Coolify Cloud, there's no need to install Coolify. Simply visit https://app.coolify.io/register to create an account and start using Coolify within minutes.
+If you choose to use Starter Cloud, there's no need to install Starter. Simply visit https://app.coolify.io/register to create an account and start using Starter within minutes.
 
-The following instructions are for installing Coolify if you decide to self-host it.
+The following instructions are for installing Starter if you decide to self-host it.
 
 
 ## Self-hosted Installation
@@ -19,11 +19,11 @@ For detailed instructions, including firewall configuration and prerequisites, s
 :::
 
 
-## Prerequisites for Installing Coolify
-Before setting up Coolify, ensure your server meets the necessary requirements for everything to run smoothly.
+## Prerequisites for Installing Starter
+Before setting up Starter, ensure your server meets the necessary requirements for everything to run smoothly.
 
 #### Quick Links to Important Sections:
-- [Server Requirements for Coolify](#_1-server-requirements)
+- [Server Requirements for Starter](#_1-server-requirements)
 - [Supported Operating Systems](#_2-supported-operating-systems)
 - [Supported Architectures](#_3-supported-architectures)
 - [Minimum Hardware Requirements](#_4-minimum-hardware-requirements)
@@ -40,7 +40,7 @@ You need access to a server that supports SSH connections. This can be:
 - Any other server with SSH access
 
 :::tip 📝 Note:
-It is highly recommended to use a fresh server for installing Coolify to avoid conflicts with existing applications.
+It is highly recommended to use a fresh server for installing Starter to avoid conflicts with existing applications.
 :::
 
 :::info 💡 Tip:
@@ -50,7 +50,7 @@ If you don’t have a server provider yet, we recommend using [Hetzner ↗](http
 ---
 
 ### 2. Supported Operating Systems
-Coolify supports several operating systems. Make sure your server runs one of the following:
+Starter supports several operating systems. Make sure your server runs one of the following:
 
 - Debian-based Linux distributions (e.g., Debian, Ubuntu)
 - Redhat-based Linux distributions (e.g., CentOS, Fedora, Redhat, AlmaLinux, Rocky, Asahi)
@@ -62,7 +62,7 @@ Coolify supports several operating systems. Make sure your server runs one of th
 ---
 
 ### 3. Supported Architectures
-Coolify supports 64-bit architectures only, including:
+Starter supports 64-bit architectures only, including:
 
 - AMD64
 - ARM64
@@ -74,18 +74,18 @@ Make sure you use the 64-bit version of Raspberry Pi OS (Raspbian). Check out ou
 ---
 
 ### 4. Minimum Hardware Requirements
-Your server needs to meet the following minimum specifications for Coolify to work properly:
+Your server needs to meet the following minimum specifications for Starter to work properly:
 
 - **CPU**: At least 2 cores
 - **Memory (RAM)**: At least 2 GB
 - **Storage**: At least 30 GB of free space
 
-Coolify may function properly on servers with lower specs than those mentioned above, but we recommend slightly higher minimum requirements.
+Starter may function properly on servers with lower specs than those mentioned above, but we recommend slightly higher minimum requirements.
 
 This ensures that users have sufficient resources to deploy multiple applications without performance issues.
 
 ::: warning Heads up!:
-If you’re hosting the builds and Coolify on the same server, be cautious of memory usage. If all resources are utilized, your server may become unresponsive or even crash.
+If you’re hosting the builds and Starter on the same server, be cautious of memory usage. If all resources are utilized, your server may become unresponsive or even crash.
 
 To prevent this, you may need to enable swap space or consider upgrading your server resources.
 :::
@@ -121,7 +121,7 @@ Bob is hosting most of his production applications on a server with:
 
 
 ## Installation Methods
-There are **two ways** to install Coolify:
+There are **two ways** to install Starter:
 - [Quick Installation ↗](#quick-installation-recommended) (Recommended)
 - [Manual Installation ↗](#manual-installation)
 
@@ -130,7 +130,7 @@ We highly recommend using the **Quick Installation** method as it automates the 
 ---
 
 ### Quick Installation (Recommended)
-This method is the easiest and fastest way to install Coolify, as it handles everything automatically.
+This method is the easiest and fastest way to install Starter, as it handles everything automatically.
 
 #### 1. Prepare Your Server
 - Log in as the root user ([non-root ↗](/knowledge-base/server/non-root-user) users are not fully supported yet).
@@ -139,7 +139,7 @@ This method is the easiest and fastest way to install Coolify, as it handles eve
 - Ensure curl is installed (it’s pre-installed on most systems).
 
 #### 2. Run the Installation Script
-Once your server is prepared, run the following script to install Coolify:
+Once your server is prepared, run the following script to install Starter:
 
 ```sh
   curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash
@@ -157,17 +157,17 @@ If you're not logged in as the root user, run the script with sudo:
 You can also set up the first admin account directly during the installation. For details, see: [Create Root User with Environment Variables ↗](/knowledge-base/create-root-user-with-env)
 :::
 
-#### 3. Access Coolify
-After installation, the script will display the Coolify URL (ex: `http://203.0.113.1:8000`) in the terminal output.
+#### 3. Access Starter
+After installation, the script will display the Starter URL (ex: `http://203.0.113.1:8000`) in the terminal output.
 
 ::: danger ⚠️ CAUTION!
-**After installing Coolify, the URL redirects to a registration page to set up the first admin account. It's important to create this account immediately.**
+**After installing Starter, the URL redirects to a registration page to set up the first admin account. It's important to create this account immediately.**
 
 **If someone else access the registration page before you, they could create the admin account and gain full root access to your server.**
 :::
 
 ::: info Note:
-If you installed Coolify on a Raspberry Pi in your home network, use the private IP address to access Coolify, as the public IP may not work.
+If you installed Starter on a Raspberry Pi in your home network, use the private IP address to access Starter, as the public IP may not work.
 :::
 
 
@@ -182,7 +182,7 @@ Docker installed via snap is not supported!
 - Configures Docker settings (logging, daemon)
 - Sets up directories at /data/coolify
 - Configures SSH keys for server management
-- Installs and starts Coolify
+- Installs and starts Starter
 
 ---
 
@@ -208,13 +208,13 @@ Docker installed via snap is not supported!
 - [Set Permissions](#_4-set-permissions)
 - [Generate Values](#_5-generate-values)
 - [Create Docker Network](#_6-create-docker-network)
-- [Start Coolify](#_7-start-coolify)
-- [Access Coolify](#_8-access-coolify)
+- [Start Starter](#_7-start-coolify)
+- [Access Starter](#_8-access-coolify)
 
 ---
 
 #### 1. Create Directories
-Create the base configuration directories for Coolify under `/data/coolify`
+Create the base configuration directories for Starter under `/data/coolify`
 ```sh
   mkdir -p /data/coolify/{source,ssh,applications,databases,backups,services,proxy,webhooks-during-maintenance}
   mkdir -p /data/coolify/ssh/{keys,mux}
@@ -222,24 +222,24 @@ Create the base configuration directories for Coolify under `/data/coolify`
 ```
 
 #### 2. Generate & Add SSH Key
-Generate an SSH key for Coolify to be able to manage this server from itself:
+Generate an SSH key for Starter to be able to manage this server from itself:
 ```sh
   ssh-keygen -f /data/coolify/ssh/keys/id.root@host.docker.internal -t ed25519 -N '' -C root@coolify
 ```
 
-Add the public SSH key to `~/.ssh/authorized_keys`. This will allow Coolify to connect to this server from itself.
+Add the public SSH key to `~/.ssh/authorized_keys`. This will allow Starter to connect to this server from itself.
 ```sh
   cat /data/coolify/ssh/keys/id.root@host.docker.internal.pub >>~/.ssh/authorized_keys
   chmod 600 ~/.ssh/authorized_keys
 ```
 
 ::: tip Tip!
-You can skip this step if you already have an SSH key. But you need to add this key to your Coolify instance after installation.
+You can skip this step if you already have an SSH key. But you need to add this key to your Starter instance after installation.
 :::
 
 
 #### 3. Setup Configuration Files
-Copy the `docker-compose.yml`, `docker-compose.prod.yml`, `.env.production` & `upgrade.sh` files from Coolify’s CDN to `/data/coolify/source`:
+Copy the `docker-compose.yml`, `docker-compose.prod.yml`, `.env.production` & `upgrade.sh` files from Starter’s CDN to `/data/coolify/source`:
 ```sh
   curl -fsSL https://cdn.coollabs.io/coolify/docker-compose.yml -o /data/coolify/source/docker-compose.yml
   curl -fsSL https://cdn.coollabs.io/coolify/docker-compose.prod.yml -o /data/coolify/source/docker-compose.prod.yml
@@ -268,9 +268,9 @@ Update the `.env` file with secure random values for the following variables in 
 ```
 
 ::: warning ⚠️ Caution!!
-This only needs to be done once, when you install Coolify for the first time. If you do it after Coolify has been first started, it will break your installation.
+This only needs to be done once, when you install Starter for the first time. If you do it after Starter has been first started, it will break your installation.
 
-Make sure you save the values somewhere that are stored in the .env file. If you lose them, you will lose access to your Coolify installation and all your data.
+Make sure you save the values somewhere that are stored in the .env file. If you lose them, you will lose access to your Starter installation and all your data.
 :::
 
 #### 6. Create Docker Network
@@ -279,11 +279,11 @@ Make sure the Docker network is created:
   docker network create --attachable coolify
 ```
 
-#### 7. Start Coolify
-Start Coolify using Docker Compose:
+#### 7. Start Starter
+Start Starter using Docker Compose:
 ```sh
   docker compose --env-file /data/coolify/source/.env -f /data/coolify/source/docker-compose.yml -f /data/coolify/source/docker-compose.prod.yml up -d --pull always --remove-orphans --force-recreate
 ```
 
-#### 8. Access Coolify
-You can now access Coolify via `http://<your-server-ip>:8000`.
+#### 8. Access Starter
+You can now access Starter via `http://<your-server-ip>:8000`.

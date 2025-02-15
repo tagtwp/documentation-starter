@@ -3,13 +3,13 @@
 layout: home
 
 hero:
-  name: "Coolify"
+  name: "Starter"
   text: "Open Source PaaS"
   tagline: Self-host your own databases, services (like Wordpress, Plausible Analytics, Ghost) and applications (like Next.js, Nuxt.js, Remix, SvelteKit) with ease.
   actions:
     - theme: brand
       text: Get Started
-      link: /what-is-coolify
+      link: /what-is-starter
     - theme: alt
       text: View Source Code
       link: #
@@ -65,7 +65,7 @@ features:
     # Commented out the below code instead of deleting it because I'm not sure if we need it or not... nothing breaks after commenting out the code so seems like it is safe to remove.
     # Serdar take care of this one!!!
 # landing:
-#   title: "Coolify"
+#   title: "Starter"
 #   text: "Open source PaaS for self-hosting appss"
 #   tagline: Self-host your own databases, services (like Wordpress, Plausible Analytics, Ghost) and applications (like Next.js, Nuxt.js, Remix, SvelteKit) with ease.
 #   features:
