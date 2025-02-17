@@ -3,7 +3,7 @@ name: Create Release Tag
 on:
   push:
     tags:
-      - '@starter/theme*' # Push events to matching @starter/theme*
+      - '@starter/docs*' # Push events to matching @starter/docs*
 
 jobs:
   build:
