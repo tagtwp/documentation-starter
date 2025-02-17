@@ -21,6 +21,6 @@
     "preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@vueuse/core": "12.5.0"
+    "@vueuse/core": "12.7.0"
   }
 }
