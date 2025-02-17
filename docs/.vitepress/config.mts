@@ -6,7 +6,7 @@ export default defineConfig({
   lang: 'en-US',
   title: "Starter Docs",
   description: "A VitePress Site",
-  appearance: 'force-dark', // 'dark' allows user to change theme
+  // appearance: 'force-dark', // 'dark' allows user to change theme
   base: '/docs/',
   cleanUrls: true,
   lastUpdated: true,
@@ -51,20 +51,58 @@ export default defineConfig({
       provider: 'local'
     },
 
-    sidebar: [
-      {
-        text: 'Get Started',
-        collapsed: false,
-        items: [
-          { text: 'What is Starter?', link: '/what-is-starter' },
-          { text: 'Installation', link: '/installation' },
-          { text: 'Upgrade', link: '/upgrade' },
-        ],
-      }
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/tagtwp/documentation-starter' },
+      { icon: 'discord', link: '#' },
+      { icon: 'x', link: '#' }
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+    sidebar: [
+      {
+        text: 'Getting Started',
+        collapsed: false,
+        items: [
+          { text: 'What is FTP?', link: '/what-is-ftp' },
+          { text: 'What is cPanel?', link: '/what-is-cpanel' },
+          { text: 'Configuring Server Settings', link: '/configuring-server-settings' },
+        ],
+      },
+      {
+        text: 'Theme Installation',
+        collapsed: true,
+        items: [
+          { text: 'Using Child Theme', link: '/theme-installation/using-child-theme' },
+          { text: 'Install Demo Content', link: '/theme-installation/install-demo-content' },
+          { text: 'Install Default Plugins', link: '/theme-installation/install-default-plugins' },
+          { text: 'How to Deactivate a Theme to Transfer a Domain', link: '/theme-installation/how-to-deactivate-a-theme-to-transfer-a-domain' },
+          { text: 'How to Activate the Theme', link: '/theme-installation/how-to-activate-the-theme' },
+          { text: 'How do I Update the Theme?', link: '/theme-installation/how-to-update-the-theme' },
+          { text: 'Download and Install Theme', link: '/theme-installation/download-and-install-theme' },
+        ],
+      },
+      {
+        text: 'Theme Options',
+        collapsed: true,
+        items: [
+          { text: 'Your Site Social Profiles', link: '/theme-options/your-site-social-profiles' },
+          { text: 'What is Theme Options', link: '/theme-options/what-is-theme-options' },
+          { text: 'Typography Options', link: '/theme-options/typography-options' },
+          { text: 'Theme Design', link: '/theme-options/theme-design' },
+          { text: 'Standard Blog Design & Styling', link: '/theme-options/standard-blog-design-styling' },
+        ],
+      },
+      {
+        text: 'Widgets & Sidebar',
+        collapsed: true,
+        items: [
+          { text: 'How to Create a Weather Widget?', link: '/how-to-create-a-weather-widget' },
+          { text: 'How to Create a Custom Sidebar', link: '/how-to-create-a-custom-sidebar' },
+          { text: 'How to Config Sticky Sidebar?', link: '/how-to-config-sticky-sidebar' },
+          { text: 'How to Add Contact Information art the Right Sidebar?', link: '/how-to-add-contact-information-art-the-right-sidebar' },
+          { text: 'Editing Sidebars and Widgets', link: '/editing-sidebars-and-widgets' },
+          { text: 'Assigning a sidebar to Posts & Pages', link: '/assigning-a-sidebar-to-posts-and-page' },
+        ],
+      }
     ]
   },
   vite: {

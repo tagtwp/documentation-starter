@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /what-is-starter
+      link: /what-is-ftp
     - theme: alt
       text: View Source Code
       link: #
