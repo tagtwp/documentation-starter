@@ -51,11 +51,11 @@ watchPostEffect(() => {
         <div class="content">
           <div class="content-body">
             <slot name="nav-bar-content-before" />
-            <!-- <VPNavBarSearch class="search" /> -->
-            <!-- <VPNavBarMenu class="menu" /> -->
-            <!-- <VPNavBarAppearance class="appearance" /> -->
+<!--            <VPNavBarSearch class="search" /> -->
+            <VPNavBarMenu class="menu" />
+            <VPNavBarAppearance class="appearance" />
             <VPNavBarTranslations class="translations" />
-            <!-- <VPNavBarSocialLinks class="social-links" /> -->
+            <VPNavBarSocialLinks class="social-links" />
             <VPNavBarExtra class="extra" />
             <slot name="nav-bar-content-after" />
             <VPNavBarHamburger class="hamburger" :active="isScreenOpen" @click="$emit('toggle-screen')" />

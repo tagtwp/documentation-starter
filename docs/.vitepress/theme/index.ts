@@ -18,6 +18,7 @@ import Card from "./components/Card.vue";
 import Landing from "./layouts/Landing.vue";
 import Sections from "./components/Landing/Sections.vue";
 import Features from "./components/Landing/Features.vue";
+import ZoomableImage from "./components/ZoomableImage.vue";
 
 export default {
   extends: DefaultTheme,
@@ -27,6 +28,7 @@ export default {
     app.component("Card", Card);
     app.component("LandingSection", Sections);
     app.component("LandingFeatures", Features);
+    app.component("ZoomableImage", ZoomableImage);
 
   }
 } satisfies Theme
