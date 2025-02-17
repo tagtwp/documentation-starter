@@ -1,4 +1,6 @@
 {
+  "name": "documentation-starter",
+  "version": "0.0.1",
   "devDependencies": {
     "autoprefixer": "10.4.20",
     "markdown-it-container": "4.0.0",
